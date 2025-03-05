@@ -7,8 +7,13 @@
     <title>Document</title>
 
     <style>
+        .description{
+            text-align: center;
+        }
+
         .description img{
-            margin: 0 10px 10px 0;
+            display: block;
+            margin: 0 auto;
             transition-property: opacity;
             transition-duration: 1s;
             transition-timing-function: ease;
@@ -19,7 +24,21 @@
             opacity: .5;
         }
         
+        .button{
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
         
+        .name{
+            display:block;
+            color:aqua;
+            text-align:center;
+            font-size:30px;
+        }
+
     </style>
 </head>
 <body>
@@ -27,9 +46,30 @@
         <a href="#"><img src="IMG_2509.jpg" alt="うさぎ"　width="300px" height="300px"></a>
     </div>
 
+    <br><br>
+
+<div class="name">あめのみづ</div>
 
 
 
+
+<button id="messageButton" class="button" >UPD</button>
+<div id="resultArea" style="text-align: center;"></div>
+
+<script>
+    const button = document.getElementById('messageButton');
+    const resultArea = document.getElementById('resultArea');
+
+    button.addEventListener('click', function(){
+        const messages = [
+        '※20250305',
+        ];
+
+    resultArea.textContent = messages[0];
+
+    });
+
+</script>
 
 </body>
 </html>
