@@ -1,75 +1,68 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
 
     <style>
-        .description{
-            text-align: center;
-        }
+      .description {
+        text-align: center;
+      }
 
-        .description img{
-            display: block;
-            margin: 0 auto;
-            transition-property: opacity;
-            transition-duration: 1s;
-            transition-timing-function: ease;
-            transition-delay: 0s;
-        }
+      .description img {
+        display: block;
+        margin: 0 auto;
+        transition-property: opacity;
+        transition-duration: 1s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+      }
 
-        .description img:hover{
-            opacity: .5;
-        }
-        
-        .button{
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        
-        .name{
-            display:block;
-            color:aqua;
-            text-align:center;
-            font-size:30px;
-        }
+      .description img:hover {
+        opacity: 0.5;
+      }
 
+      .button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .name {
+        display: block;
+        color: rgb(67, 156, 239);
+        text-align: center;
+        font-size: 30px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="description">
-        <a href="#"><img src="IMG_2509.jpg" alt="うさぎ"　width="300px" height="300px"></a>
+      <a href="#"
+        ><img src="IMG_2509.jpg" alt="うさぎ" 　width="300px" height="300px"
+      /></a>
     </div>
 
-    <br><br>
+    <br /><br />
 
-<div class="name">あめのみづ</div>
+    <div class="name">あめのみづ</div>
 
+    <button id="messageButton" class="button">UPD</button>
+    <div id="resultArea" style="text-align: center"></div>
 
+    <script>
+      const button = document.getElementById("messageButton");
+      const resultArea = document.getElementById("resultArea");
 
+      button.addEventListener("click", function () {
+        const messages = ["※20250305", "※20250306(木)"];
 
-<button id="messageButton" class="button" >UPD</button>
-<div id="resultArea" style="text-align: center;"></div>
-
-<script>
-    const button = document.getElementById('messageButton');
-    const resultArea = document.getElementById('resultArea');
-
-    button.addEventListener('click', function(){
-        const messages = [
-        '※20250305',
-        ];
-
-    resultArea.textContent = messages[0];
-
-    });
-
-</script>
-
-</body>
+        resultArea.textContent = messages[1];
+      });
+    </script>
+  </body>
 </html>
